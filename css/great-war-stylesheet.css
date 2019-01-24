@@ -1,0 +1,521 @@
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#backgroundImages{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/backgroundImages/bgImg11.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -5;
+    -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+footer {
+    background-color: rgb(40, 40, 40);
+    width: 100%;
+    height: 25px;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    color: #fff;
+    position: fixed;
+    font-size: 8pt;
+}
+
+header {
+    margin: 25px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    width: 50%;
+    height: auto;
+}
+
+header a {
+    color: #d6d6d6;
+}
+
+header a:hover{
+    opacity: 0.5;
+}
+
+footer a{
+    color: #fff;
+    opacity: 0.75;
+}
+
+footer a:hover{
+    opacity: 1;
+}
+
+.wrapper{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*----- Top Nav -----*/
+.navbar{
+    width: 100%;
+    height: 75px;
+    background-color: rgb(40, 40, 40);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-logo{
+    float: left;
+    color: #fff;
+    width: 10%;
+    padding: 0 10px;
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.nav-logo img{
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.nav-logo img:hover{
+    cursor: pointer;
+    transform: scale(1.3,1.3);
+}
+
+.nav-links{
+    margin-top: 25px;
+    color: #fff;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.nav-links li {
+    display: inline;
+    padding: 10px;
+}
+
+.nav-links li:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/*Slide Controls*/
+
+.background-controls{
+    float: right;
+    margin: 0 50px;
+    width: auto;
+    height: 50px;
+    background-color: rgba(253, 0, 0, 0.75);
+    padding: 10px;
+    text-align:  center;
+    opacity: 0.2;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.background-controls:hover{
+    opacity: 1;
+}
+
+.start-btn {
+    background-image: url("../images/icons/playBtn.png");
+}
+
+.end-btn {
+    background-image: url("../images/icons/pauseBtn.png");
+}
+
+.next-btn {
+    background-image: url("../images/icons/nextBtn.png");
+}
+
+.prev-btn {
+    background-image: url("../images/icons/prevBtn.png");
+}
+
+.bg-ctrl-btn{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    border: 1px solid #fff;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    display: inline-block;
+}
+
+.bg-ctrl-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* Search Bar*/
+.search-bar{
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.search-btn{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: 1px solid #fd0100;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+    background-color: #494949;
+    border: 1px solid rgba(253, 0, 0, 0.75);
+}
+
+input[type=text], select {
+    padding: 10px;
+    margin: 10px 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+/*----- End Top Nav -----*/
+
+
+
+/*----- Timeline ----- */
+
+.timeline-nav {
+    float: left;
+    width: 10%;
+    height: 75vh;
+    border: 1px solid #000;
+    position: fixed;
+    color: #fff;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(253, 0, 0, 0.75);
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+.timeline-area {
+    width: 100%;
+    height: 100%;  
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.timeline-ruler {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+#timelineLine{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 5px;
+    height: 0px;
+    background-color: #000;
+    transition: 0.3s;
+    z-index: 3;
+}
+
+.year-btn{
+    display: block;
+    margin: 15px 0 50px 0;
+    left: 30px;
+    z-index: 4;
+}
+
+.year-caption {
+    display: inline;
+    padding-left: 5px;
+    margin: 5px 0 0 25px;
+}
+
+.year-btn::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+.year-btn:hover::after {
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.1,.1.1);
+}
+
+.prev-year-btn::after{
+    background-color: #000;
+}
+
+.year-btn:hover{
+    cursor: pointer;
+    color: #000;
+    border: rgba(255, 255, 255, 0.5);
+}
+
+.active-year-btn{
+    color: #000;
+}
+
+.active-year-btn::after{
+    background-color: #000;
+    border: 1px solid #ffffff;
+}
+
+.timeline-years-ul {
+    list-style: none;
+    padding: 5px;
+    text-align: left;
+}
+
+.timeline-years-ul li{
+    padding: 30px 0px;
+    width: 100%;
+    height: auto;
+    transition: 0.5s;
+}
+
+.timeline-years-ul li:hover{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.timeline-content-area{
+    padding: 25px 0;
+    width: 75%;
+    height: auto;
+    margin: 25px 10px 25px 15%;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.wikitable{
+    margin: 0 auto;
+    width: 99%;
+    border-collapse: separate;
+    border-radius: 20px;
+    padding: 10px 0;
+}
+
+.wikitable th{
+    padding: 10px;
+    background-color: rgba(253, 0, 0, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.wikitable tr{
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.timeline-key-table {
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+table tr td {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;    
+    border-bottom-right-radius: 20px;  
+}
+
+.months-list{
+    list-style: none;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.months-list li{
+    background-color: #e0e0e0;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.months-list li:hover{
+    box-shadow: 0 0 5px #fd0100;
+    cursor: pointer;
+}
+
+/*----- End Timeline ----- */
+
+
+/*----- Page Content -----*/
+
+.pageNum{
+    width: 10px;
+    height: 10px;
+    margin: 20px 5px;
+    background-color: rgba(253, 0, 0, 0.75);
+    border-radius: 100%;
+    padding: 10px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.pageNum:hover{
+    transform: scale(1.2,1.2);
+}
+
+.activePageNum{
+    background-color: #fff;
+    color: #000;
+}
+
+.page-content{
+    margin-top: 80px;
+    padding: 10px;
+    z-index: 0;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.body-extender {
+    width: 100%;
+    height: 75vh;
+}
+
+.page-selection-btn{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(253, 0, 0, 0.75);
+    padding: 10px;
+    margin: 25px;
+    display: inline-block;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.page-selection-btn:hover{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: #fd0100;
+    cursor: pointer;
+    transform: scale(1.3,1.3);
+}
+
+#heroTable tr{
+    display: none;
+}
+
+.heroTableWrapper{
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    padding: 25px;
+    text-align: center;
+}
+.primary-table {
+    margin: 0 auto;
+    width: 80%;
+    height: 50%;
+    border-collapse: separate;
+    border-radius: 20px;
+}
+
+.primary-table th {
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #fd0100;
+    color: #fff;
+}
+
+.primary-table tr {
+    margin: 20px 0;
+    border: 1px solid #000;
+}
+
+.primary-table tr:nth-child(even) {
+    background-color: rgba(214, 214, 214, 0.75);
+}
+
+.primary-table tr:nth-child(odd) {
+    background-color: rgba(253, 0, 0, 0.75);
+}
+
+/*----- End Page Content ----*/
+
+/*----- Icons -----*/
+
+.home-btn-icon{
+    width: 100%;
+    height: 100px;
+    position: relative;  
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: block;
+}
+
+.hero-icon{
+    background-image: url("../images/icons/heroIcon.png");
+}
+
+.timeline-icon{
+    background-image: url("../images/icons/timelineIcon.png");
+}
+
+.settings-icon{
+    background-image: url("../images/icons/settingsIcon.png");
+}
+
+.about-icon{
+    background-image: url("../images/icons/aboutIcon.png");
+}
+
+/*----- End Icons -----*/
+
+

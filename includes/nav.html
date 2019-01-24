@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<div class="navbar" id="navSection">
+        <div class="nav-logo">
+                <img src="./images/icons/redPoppy.png" onclick="pageLoader.homePage();"/>
+        </div>
+        <div id="navLinks">
+                <ul class="nav-links">
+                        <li onclick="pageLoader.timelinePage();">Timeline</li>
+                        <li onclick="pageLoader.heroPage();">Great Heroes</li>
+                        <li onclick="pageLoader.aboutPage();">About</li>
+                </ul>
+
+                <div class="search-bar" id="searchBar">
+                        <input type="text" class="searchbar-input" id="searchbarInput" name="q" size="25" maxlength="120"/><button class="search-btn" onclick="findInPage();"><p>Search</p></button>
+                </div>
+
+                <div class="background-controls">
+                        Background Image Control
+                        <br/>
+                        <div class="bg-ctrl-btn start-btn" onclick="bgChanger.startLoop();"></div>
+                        <div class="bg-ctrl-btn end-btn" onclick="bgChanger.endLoop();"></div>
+                        <div class="bg-ctrl-btn prev-btn" onclick="bgChanger.prevImg();"></div>
+                        <div class="bg-ctrl-btn next-btn" onclick="bgChanger.nextImg();"></div>
+                </div>
+        </div>
+        
+</div>        
+</html>

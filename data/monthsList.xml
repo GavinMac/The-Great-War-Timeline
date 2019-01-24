@@ -1,0 +1,15 @@
+<!--UNUSED DOCUMENT-->
+<ul class="months-list">
+    <li onclick="setMonth('January');">January</li>
+    <li onclick="setMonth('February');">February</li>
+    <li onclick="setMonth('March');">March</li>
+    <li onclick="setMonth('April');">April</li>
+    <li onclick="setMonth('May');">May</li>
+    <li onclick="setMonth('June');">June</li>
+    <li onclick="setMonth('July');">July</li>
+    <li onclick="setMonth('August');">August</li>
+    <li onclick="setMonth('September');">September</li>
+    <li onclick="setMonth('October');">October</li>
+    <li onclick="setMonth('November');">November</li>
+    <li onclick="setMonth('December');">December</li>
+</ul>
